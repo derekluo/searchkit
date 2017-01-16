@@ -101,7 +101,7 @@ export class NestedFacetAccessor extends FilterBasedAccessor<LevelState> {
 
     return TermsBucket(
       "children", valueField,
-      {size:0, order:orderMetric},
+      {size:1000, order:orderMetric},
       subAggs
     )
 

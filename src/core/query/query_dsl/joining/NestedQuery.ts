@@ -5,7 +5,10 @@ const allowedOptions = ["score_mode", "inner_hits"]
 export function NestedQuery(path, filter, options={}){
   return {
     nested:assign({
-      path, filter
+    path, 
+    query: {
+      bool: {filter}
+      }
     }, pick(options, allowedOptions))
   }
 }
