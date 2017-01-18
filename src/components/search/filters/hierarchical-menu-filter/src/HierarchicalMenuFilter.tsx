@@ -45,7 +45,7 @@ export class HierarchicalMenuFilter extends SearchkitComponent<HierarchicalMenuF
 	}
 
 	defineAccessor() {
-		const {id, title, fields, size=0, orderKey, orderDirection} = this.props
+		const {id, title, fields, size=1000, orderKey, orderDirection} = this.props
 		return new HierarchicalFacetAccessor(id, {
 			id, title, fields, size, orderKey, orderDirection
 		})
